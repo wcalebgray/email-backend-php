@@ -15,5 +15,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/wcalebgray/email-backend-php.git"
+  },
+  "devDependencies": {
+    "semver": "^5.4.1"
   }
 }
