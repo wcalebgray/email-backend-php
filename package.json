@@ -1,10 +1,9 @@
 {
   "title": "Email Backend",
   "name": "email-backend",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A PHP Based Email Script",
-  "keywords": [
-  ],
+  "keywords": [],
   "license": "MIT",
   "author": "Caleb Gray",
   "contributors": [
