@@ -18,8 +18,8 @@ TASK="$APP"
 # exit on any error
 set -e
 
-# semver may be in node_modules
-PATH="$PATH:node_modules/.bin"
+# # semver may be in node_modules
+# PATH="$PATH:node_modules/.bin"
 
 # Check which branch I'm on and set environment based on branch
 if [ -z "$GIT_BRANCH" ]; then

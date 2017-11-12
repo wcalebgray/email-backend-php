@@ -1,0 +1,20 @@
+{
+  "title": "Email Backend",
+  "name": "email-backend",
+  "version": "0.0.0",
+  "description": "A PHP Based Email Script",
+  "keywords": [
+  ],
+  "license": "MIT",
+  "author": "Caleb Gray",
+  "contributors": [
+    "Caleb Gray"
+  ],
+  "scripts": {
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wcalebgray/email-backend-php.git"
+  }
+}
