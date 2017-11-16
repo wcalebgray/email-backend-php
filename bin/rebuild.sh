@@ -1,0 +1,1 @@
+bash bin/clean.sh && bash bin/build.sh && bash bin/run.sh
