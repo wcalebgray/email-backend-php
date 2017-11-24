@@ -1,1 +1,1 @@
-docker rm /email-backend
+docker rm email-backend
