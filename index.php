@@ -44,6 +44,7 @@ $phone = strip_tags(htmlspecialchars($_POST['phone']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
    
 // Create the email and send the message
+$sendMail = getenv("SEND_MAIL");
 $to = getenv("TO_EMAIL"); // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
 $email_username = getenv("EMAIL_USERNAME");
 $email_password = getenv("EMAIL_PASSWORD");
@@ -71,8 +72,13 @@ try {
     $mail->Body    = "<div>You have received a new message from your website contact form.<br /><br /></div>"."<div>Here are the details:<br /><br /></div><div>Name: $name<br/><br/></div><div>Email: $email_address<br/><br/></div><div>Phone: $phone<br/><br/></div><div>Message: $message</div>";
     $mail->AltBody = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
 
-    // $mail->send();
-    echo 'Message has been sent';
+    if($sendMail) {
+        $mail->send();
+        echo 'Message has been sent';
+    } else {
+        echo 'Send Mail is false but message processed successfully';
+    }    
+    
     return true;
 } catch (Exception $e) {
     echo 'Message could not be sent.';
